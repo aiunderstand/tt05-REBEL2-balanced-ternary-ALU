@@ -180,13 +180,13 @@ wire [1:0] tnet_3;
 
 assign io_out[1:0] = tnet_3; //q
 
-f_PPPPPPZD0_bet LogicGate_0 (
+f_PPPZD0ZD0_bet LogicGate_0 (
 .portC(tnet_0),
 .portB(tnet_1),
 .portA(tnet_2),
 .out(tnet_3)
 );
-
+  
 endmodule
 
 module c_2MUX2 (
@@ -387,11 +387,11 @@ f_PPPZD0ZD0_bet LogicGate_0 (
 .out(tnet_6)
 );
 
-f_RPPRPPZD0_bet LogicGate_1 (
-.portC(tnet_1),
-.portB(tnet_3),
-.portA(tnet_4),
-.out(tnet_5)
+f_PPPPPPZD0_bet LogicGate_1 (
+  .portC(tnet_1),
+  .portB(tnet_3),
+  .portA(tnet_4),
+  .out(tnet_5)
 );
 
 endmodule
@@ -943,33 +943,6 @@ module f_RDC_bet (
      2'b11;
 endmodule
 
-module f_RPPRPPZD0_bet (
-     input wire[1:0] portC,
-     input wire[1:0] portB,
-     input wire[1:0] portA,
-     output wire[1:0] out
-     );
-
-     assign out = 
-    (portC == 2'b01) & (portB == 2'b01) & (portA == 2'b01) ? 2'b01 :
-    (portC == 2'b01) & (portB == 2'b11) & (portA == 2'b01) ? 2'b01 :
-    (portC == 2'b01) & (portB == 2'b10) & (portA == 2'b01) ? 2'b01 :
-    (portC == 2'b01) & (portB == 2'b01) & (portA == 2'b10) ? 2'b10 :
-    (portC == 2'b01) & (portB == 2'b11) & (portA == 2'b10) ? 2'b10 :
-    (portC == 2'b01) & (portB == 2'b10) & (portA == 2'b10) ? 2'b10 :
-    (portC == 2'b11) & (portB == 2'b01) & (portA == 2'b01) ? 2'b01 :
-    (portC == 2'b11) & (portB == 2'b10) & (portA == 2'b01) ? 2'b10 :
-    (portC == 2'b11) & (portB == 2'b01) & (portA == 2'b11) ? 2'b01 :
-    (portC == 2'b11) & (portB == 2'b10) & (portA == 2'b11) ? 2'b10 :
-    (portC == 2'b11) & (portB == 2'b10) & (portA == 2'b10) ? 2'b10 :
-    (portC == 2'b10) & (portB == 2'b01) & (portA == 2'b01) ? 2'b01 :
-    (portC == 2'b10) & (portB == 2'b10) & (portA == 2'b01) ? 2'b10 :
-    (portC == 2'b10) & (portB == 2'b01) & (portA == 2'b11) ? 2'b01 :
-    (portC == 2'b10) & (portB == 2'b10) & (portA == 2'b11) ? 2'b10 :
-    (portC == 2'b10) & (portB == 2'b10) & (portA == 2'b10) ? 2'b10 :
-     2'b11;
-endmodule
-
 module f_XRDRDCDC9_bet (
      input wire[1:0] portC,
      input wire[1:0] portB,
@@ -1080,4 +1053,3 @@ module f_ZZZH51000_bet (
     (portC == 2'b10) & (portB == 2'b10) & (portA == 2'b10) ? 2'b10 :
      2'b11;
 endmodule
-
